@@ -1,16 +1,19 @@
-<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>SELECTED WORKS — AKOROGIE PRECIOUS</title>
-<!-- Fonts & Material Symbols -->
+<title>02 WORK — AKOROGIE PRECIOUS | Digital Monograph</title>
+
+<!-- Google Fonts: Manrope & Inter -->
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<!-- Tailwind Script -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<!-- Tailwind CSS -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<!-- Verbatim Tailwind Configuration -->
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -111,411 +114,452 @@
             "display-desktop": ["84px", { "lineHeight": "96px", "letterSpacing": "-0.03em", "fontWeight": "400" }],
             "headline-3": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
           }
-        },
-      },
+        }
+      }
     }
-  </script>
+</script>
 <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-      font-size: 20px;
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .img-zoom {
-      transition: transform 700ms cubic-bezier(0.25, 1, 0.5, 1);
-    }
-    .group:hover .img-zoom {
-      transform: scale(1.025);
-    }
-    .link-underline {
+    .architectural-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
       position: relative;
+      text-decoration: none;
+      transition: color 300ms cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .link-underline::after {
+    .architectural-link::after {
       content: '';
       position: absolute;
-      width: 100%;
-      height: 1px;
       bottom: -2px;
       left: 0;
+      width: 100%;
+      height: 1px;
       background-color: currentColor;
-      transform: scaleX(0);
-      transform-origin: bottom left;
+      transform-origin: left center;
       transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .group:hover .link-underline::after,
-    .link-underline:hover::after {
-      transform: scaleX(1);
+    .architectural-link .arrow-glyph {
+      display: inline-block;
+      transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1);
     }
-  </style>
+    .architectural-link:hover .arrow-glyph {
+      transform: translateX(4px);
+    }
+    .img-zoom-frame {
+      overflow: hidden;
+    }
+    .img-zoom-frame img {
+      transition: transform 700ms cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .img-zoom-frame:hover img {
+      transform: scale(1.03);
+    }
+</style>
 </head>
-<body class="bg-surface-container-low text-primary-container selection:bg-secondary-fixed selection:text-primary font-body-default antialiased min-h-screen flex flex-col">
-<!-- ================= TOP APP BAR (Shared Component Exact Implementation) ================= -->
+<body class="bg-surface-container-low text-primary selection:bg-secondary-container selection:text-primary font-body-default antialiased">
+
+<!-- ===================== TOP APP BAR (Shared Component) ===================== -->
 <header class="sticky top-0 z-50 bg-surface border-b border-outline-variant/30">
 <div class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-md flex justify-between items-center max-w-[1600px] mx-auto">
-<!-- Architect Identity -->
-<a class="font-metadata-caps text-metadata-caps tracking-widest font-semibold text-primary uppercase hover:text-tertiary transition-colors duration-300" href="/work">
-        AKOROGIE PRECIOUS
-      </a>
-<!-- Desktop Navigation Cluster -->
+<!-- Brand Logo / Identity -->
+<a class="font-metadata-caps text-metadata-caps tracking-widest font-semibold text-primary uppercase hover:text-tertiary transition-colors duration-300" href="/">AKOROGIE PRECIOUS</a>
+<!-- Desktop Minimal Numbered Navigation -->
 <nav class="hidden md:flex items-center space-x-8">
-<!-- 01 WORK (ACTIVE) -->
-<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal transition-colors duration-300" href="index.html">
+<!-- Active Nav: 01 WORK (Homepage showcases Selected Work portfolio) -->
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant pb-space-xs font-medium transition-colors duration-300" href="#">
           01 HOME
         </a>
-<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-tertiary border-b border-tertiary pb-space-xs font-medium transition-colors duration-300" href="/work">
-          01 WORK
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-tertiary border-b border-tertiary pb-space-xs font-medium transition-colors duration-300" href="#work">
+          02 WORK
         </a>
-<!-- 02 ABOUT -->
-<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal hover:text-tertiary transition-colors duration-300" href="about.html">
-          02 ABOUT
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal hover:text-tertiary transition-colors duration-300" href="template/about.html">
+          03 ABOUT
         </a>
-<!-- 03 CONTACT -->
-<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal hover:text-tertiary transition-colors duration-300" href="#contact">
-          03 CONTACT
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal hover:text-tertiary transition-colors duration-300" href="template/contactus.html">
+          04 CONTACT
         </a>
 </nav>
 <!-- Trailing Action -->
-<div class="flex items-center space-x-6">
-<a class="hidden lg:inline-block font-metadata-caps text-metadata-caps tracking-widest uppercase text-primary border border-primary-container/20 px-4 py-2 hover:bg-primary-container hover:text-surface transition-all duration-300" href="#cv">
-          CV / RESUME
-        </a>
-<button aria-label="Open Navigation" class="md:hidden flex items-center text-primary focus:outline-none" type="button">
-<span class="material-symbols-outlined" data-icon="menu">menu</span>
+<div class="hidden md:flex items-center">
+<a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase"  download="" href="CV/Precious Akorogie Uche cv.pdf">
+          CV / RESUME <span class="arrow-glyph">→</span>
+</a>
+</div>
+<!-- Mobile Trigger -->
+<button aria-label="Open Navigation Menu" class="md:hidden text-primary p-1 focus:outline-none" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
 </button>
+</div>
+<!-- Mobile Drawer Overlay -->
+<div class="hidden md:hidden fixed inset-0 top-[65px] bg-surface z-40 px-margin-mobile py-space-md flex flex-col justify-between border-t border-outline-variant/30" id="mobile-drawer">
+<div class="flex flex-col space-y-1">
+<a class="font-headline-2-mobile text-headline-2-mobile text-primary border-b border-outline-variant/20 pb-4" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          01 HOME
+        </a>
+<a class="font-headline-2-mobile text-headline-2-mobile text-tertiary border-b  border-outline-variant/20 pb-4" href="#work" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          02 WORK
+        </a>
+<a class="font-headline-2-mobile text-headline-2-mobile text-primary border-b border-outline-variant/20 pb-4" href="about.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          03 ABOUT
+        </a>
+<a class="font-headline-2-mobile text-headline-2-mobile text-primary border-b border-outline-variant/20 pb-4" href="template/contactus.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          04 CONTACT
+        </a>
+
+<div class="border-b mt-5 text-center p-4 w-">
+<a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase"  download="" href="CV/Precious Akorogie Uche cv.pdf">
+          CV / RESUME <span class="arrow-glyph">→</span>
+</a>
+</div>
+
+</div>
+<div class="pt-8">
+<span class="font-metadata-label text-metadata-label text-secondary uppercase block mb-2">PRACTICE INQUIRIES</span>
+<a class="font-body-default text-body-default text-primary underline underline-offset-4" href="mailto:estrellagold202@gmail.com">estrellagold202@gmail.com</a>
 </div>
 </div>
 </header>
-<!-- ================= MAIN CATALOGUE CONTENT CANVAS ================= -->
-<main class="flex-grow w-full max-w-[1600px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
-<!-- PAGE TITLE / EDITORIAL MONOGRAPH HEADER -->
-<section class="pt-space-xl pb-space-2xl border-b border-primary-container/10">
-<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter">
-<div class="lg:col-span-2">
-<span class="font-metadata-label text-metadata-label text-secondary uppercase block mb-3">
-            CATALOGUE / 01
-          </span>
-<p class="font-metadata-caps text-metadata-caps text-on-surface-variant/80 tracking-widest uppercase">
-            FOLIO N° 2021—2025
-          </p>
-</div>
-<div class="lg:col-span-10">
-<h1 class="font-display-desktop text-display-mobile md:text-display-desktop text-primary font-normal tracking-tight mb-8">
-            SELECTED WORKS
-          </h1>
-<div class="lg:grid lg:grid-cols-10 gap-gutter">
-<p class="lg:col-span-7 font-body-large text-body-large text-primary-container/90 leading-relaxed">
-              An ordered catalogue of eight architectural projects across Nigeria, exploring climate, indigenous materiality, and spatial purpose. Each intervention negotiates tropical solar orientation, rammed laterite earth, and modern tectonic frameworks.
-            </p>
-</div>
-</div>
-</div>
+
+
+<main class="w-full max-w-[1600px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin">
+
+<!-- ===================== PAGE TITLE / EDITORIAL MONOGRAPH HEADER ===================== -->
+<section class="pt-space-xl md:pt-space-2xl pb-space-2xl border-b border-outline-variant/20">
+  <div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter items-baseline pb-space-md border-b border-outline-variant/20 mb-space-xl">
+    <div class="col-span-1 md:col-span-3">
+      <span class="font-metadata-label text-metadata-label text-secondary uppercase block">CATALOGUE / 01</span>
+      <span class="font-metadata-caps text-metadata-caps text-primary uppercase">FOLIO N° 2021—2025</span>
+    </div>
+    <div class="hidden md:block md:col-span-6">
+      <span class="font-metadata-label text-metadata-label text-secondary uppercase block">PORTFOLIO INDEX</span>
+      <span class="font-metadata-caps text-metadata-caps text-primary uppercase">SELECTED ARCHITECTURAL WORKS</span>
+    </div>
+    <div class="col-span-1 md:col-span-3 text-right">
+      <span class="font-metadata-label text-metadata-label text-secondary uppercase block">PROJECT COUNT</span>
+      <span class="font-metadata-caps text-metadata-caps text-primary font-medium uppercase">06 / 06</span>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+    <div class="lg:col-span-9">
+      <h1 class="font-display-mobile md:font-display-desktop text-display-mobile md:text-display-desktop text-primary uppercase tracking-tight leading-[0.95] mb-space-md">
+        SELECTED WORKS
+      </h1>
+    </div>
+    <div class="lg:col-span-3 lg:text-right">
+      <span class="font-metadata-label text-metadata-label text-secondary uppercase block mb-space-xs">MONOGRAPH VOL. IV</span>
+      <span class="font-metadata-caps text-metadata-caps text-primary uppercase">OSUN / LAGOS / ABUJA</span>
+    </div>
+  </div>
+
+  <p class="font-body-large text-body-large text-on-surface-variant font-light max-w-3xl mt-space-lg leading-relaxed">
+    An ordered catalogue of eight architectural projects across Nigeria, exploring climate, indigenous materiality, and spatial purpose. Each intervention negotiates tropical solar orientation, rammed laterite earth, and modern tectonic frameworks.
+  </p>
 </section>
-<!-- CATALOGUE ENTRIES (Alternating Monograph Rhythm) -->
-<div class="divide-y divide-primary-container/10">
-<!-- PROJECT 01: RESIDENCE 01 (Asymmetric Landscape: Left Image Cols 1-8, Right Meta Cols 9-12) -->
-<article class="py-space-xl lg:py-space-2xl group">
-<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter items-start">
-<div class="lg:col-span-8 overflow-hidden bg-surface-container">
-<a class="block overflow-hidden aspect-[16/10]" href="#project-01">
 
-<img class="w-full h-full object-cover img-zoom" data-alt="Curving open-air CHURCH AUDITORIUM in Calabar Nigeria constructed from rammed red laterite earth and soaring bent timber beams. Soft early morning mist rising through lush tropical canopy surrounds, with diffuse golden light grazing the earthen layers. High-end architectural monograph framing highlighting natural materials, tactile surfaces, and tranquil spatial volume." src="../clinic design osun/clinic image 2.jpg">
-</a>
-</div>
-<div class="lg:col-span-4 flex flex-col justify-between pt-4 lg:pt-0">
+<!-- ===================== CATALOGUE ENTRIES ===================== -->
+<div class="divide-y divide-outline-variant/30">
 
-<div class="flex items-center justify-between border-b border-primary-container/15 pb-4 mb-6">
-<span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 01 / 06</span>
-<span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2025</span>
-</div>
-<h2 class="font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary mb-3">
-                RESIDENCE 01
-              </h2>
-<p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-6 tracking-widest">
-                Residential Architecture — Lagos, Nigeria
-              </p>
-<p class="font-body-default text-body-default text-primary-container/80 mb-8 leading-relaxed">
-                The design is a mixed-use building that integrates a healthcare facility and a residential apartment under a hip roof, with an emphasis on functionality and aesthetics
-              </p>
-<div class="border-t border-primary-container/10 pt-4 space-y-2 mb-8">
-<div class="flex justify-between font-metadata-caps text-metadata-caps">
-<span class="text-secondary uppercase">Site Area</span>
-<span class="text-primary-container">1,420 m²</span>
-</div>
-<div class="flex justify-between font-metadata-caps text-metadata-caps">
-<span class="text-secondary uppercase">Structure</span>
-<span class="text-primary-container">Reinforced Fair-Faced Concrete</span>
-</div>
-</div>
-</div>
-<div>
-<a class="inline-flex items-center space-x-2 font-metadata-caps text-metadata-caps text-primary hover:text-tertiary transition-colors duration-300 link-underline uppercase tracking-widest" href="#project-01">
-<span class="">VIEW PROJECT</span>
-<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-</a>
-</div>
-</div>
-</div>
-</article>
-<!-- PROJECT 02: MULTI-PURPOSE HALL (Reversed Layout: Left Meta Cols 1-4, Right Vertical Image Cols 6-12) -->
-<article class="py-space-xl lg:py-space-2xl group">
-<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter items-start">
-<div class="order-2 lg:order-1 lg:col-span-4 flex flex-col justify-between pt-4 lg:pt-0">
-<div>
-<div class="flex items-center justify-between border-b border-primary-container/15 pb-4 mb-6">
-<span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 02 / 06</span>
-<span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2024</span>
-</div>
-<h2 class="font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary mb-3">
-                MULTI-PURPOSE HALL
-              </h2>
-<p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-6 tracking-widest">
-                Commercial Architecture — Abuja, Nigeria
-              </p>
-<p class="font-body-default text-body-default text-primary-container/80 mb-8 leading-relaxed">
-                The design is a mixed-use building that integrates a residential apartment and a multi-purpose hall under a hip roof, with an emphasis on functionality and aesthetics.
-              </p>
-<div class="border-t border-primary-container/10 pt-4 space-y-2 mb-8">
-<div class="flex justify-between font-metadata-caps text-metadata-caps">
-<span class="text-secondary uppercase">Gross Built Area</span>
-<span class="text-primary-container">8,800 m²</span>
-</div>
-<div class="flex justify-between font-metadata-caps text-metadata-caps">
-<span class="text-secondary uppercase">Envelope</span>
-<span class="text-primary-container">Extruded Terracotta Louvers</span>
-</div>
-</div>
-</div>
-<div>
-<a class="inline-flex items-center space-x-2 font-metadata-caps text-metadata-caps text-primary hover:text-tertiary transition-colors duration-300 link-underline uppercase tracking-widest" href="#project-02">
-<span class="">VIEW PROJECT</span>
-<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-</a>
-</div>
-</div>
-<div class="order-1 lg:order-2 lg:col-start-6 lg:col-span-7 overflow-hidden bg-surface-container">
-<a class="block overflow-hidden aspect-[4/5]" href="#project-02">
-<img class="w-full h-full object-cover img-zoom" data-alt="Monumental commercial office headquarters in Abuja Nigeria with a geometric vertical terracotta louvered screen facade. Midday warm desert light casting intricate linear shadows down the sharp stone plinth. Professional architectural photography emphasizing scale, clean structural lines, deep slate framing, and muted sand stone textures." src="../multipurpose osun/multi image 1.jpg">
-</a>
-</div>
-</div>
-</article>
-<!-- PROJECT 03: CHURCH AUDITORIUM (Asymmetric 8-Col Image with raw whitespace on Column 9) -->
-<article class="py-space-xl lg:py-space-2xl group">
-<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter items-end">
-<div class="lg:col-span-8 overflow-hidden bg-surface-container">
-<a class="block overflow-hidden aspect-[16/9]" href="#project-03">
-<img class="w-full h-full object-cover img-zoom" data-alt="Curving open-air CHURCH AUDITORIUM in Calabar Nigeria constructed from rammed red laterite earth and soaring bent timber beams. Soft early morning mist rising through lush tropical canopy surrounds, with diffuse golden light grazing the earthen layers. High-end architectural monograph framing highlighting natural materials, tactile surfaces, and tranquil spatial volume." src="../church design lagos/lagos church image 2.jpg">
-</a>
-</div>
-<div class="lg:col-start-10 lg:col-span-3 pt-6 lg:pt-0">
-<div class="border-b border-primary-container/15 pb-4 mb-6">
-<span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 03 / 06</span>
-<span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold float-right">2024</span>
-</div>
-<h2 class="font-headline-2-desktop text-headline-2-mobile md:text-headline-3 text-primary mb-3">
-              CHURCH AUDITORIUM
-            </h2>
-<p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-4 tracking-widest">
-              Public &amp; Cultural — Calabar, Nigeria
-            </p>
-<p class="font-body-default text-body-default text-primary-container/80 mb-6">
-              A church auditorium designed to create a welcoming space for worship, fellowship, and community gatherings, combining functional planning with a simple and thoughtful architectural expression.
-            </p>
-<a class="inline-flex items-center space-x-2 font-metadata-caps text-metadata-caps text-primary hover:text-tertiary transition-colors duration-300 link-underline uppercase tracking-widest" href="#project-03">
-<span class="">VIEW PROJECT</span>
-<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-</a>
-</div>
-</div>
-</article>
-<!-- PROJECT 04: WARRI APARTMENT (Offset Staggered Architecture) -->
-<article class="py-space-xl lg:py-space-2xl group">
-<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter items-center">
-<div class="lg:col-start-2 lg:col-span-4 mb-6 lg:mb-0">
-<div class="border-b border-primary-container/15 pb-4 mb-6">
-<span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 04 / 06</span>
-<span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold float-right">2023</span>
-</div>
-<h2 class="font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary mb-3">
-              WARRI APARTMENT
-            </h2>
-<p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-6 tracking-widest">
-              Housing Architecture — Delta Warri, Nigeria
-            </p>
-<p class="font-body-default text-body-default text-primary-container/80 mb-6 leading-relaxed">
-              A thoughtfully designed bungalow that combines functional planning, contemporary aesthetics, and comfortable living. The design emphasizes efficient use of space, well-organized interiors, and a seamless connection between indoor and outdoor environments. Careful consideration is given to natural lighting, ventilation, and the arrangement of living spaces to create a home that is both practical and inviting. With its clean architectural lines and balanced proportions, the bungalow reflects a simple yet refined approach to residential design.
-            </p>
-<a class="inline-flex items-center space-x-2 font-metadata-caps text-metadata-caps text-primary hover:text-tertiary transition-colors duration-300 link-underline uppercase tracking-widest" href="#project-04">
-<span class="">VIEW PROJECT</span>
-<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-</a>
-</div>
-<div class="lg:col-start-7 lg:col-span-6 overflow-hidden bg-surface-container">
-<a class="block overflow-hidden aspect-[4/3]" href="#project-04">
-<img class="w-full h-full object-cover img-zoom" data-alt="Elevated timber and weathered zinc eco chalets nestled along the mangrove waterways of Lekki Peninsula Nigeria. Overcast atmospheric daylight illuminating the textured charred wood cladding, glass curtain walls, and wooden boardwalks. Editorial architectural monograph photography with low-saturation warm tones and deep forest accents." src="../3 bedroom warri/warri image 3.jpg">
-</a>
-</div>
-</div>
-</article>
-<!-- PROJECT 05: LAGOS APARTMENT (Minimalist Two-Column Configuration) -->
-<article class="py-space-xl lg:py-space-2xl group">
-<div class="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter items-start">
-<div class="lg:col-span-6 overflow-hidden bg-surface-container">
-<a class="block overflow-hidden aspect-square" href="#project-05">
-<img class="w-full h-full object-cover img-zoom" data-alt="Brutalist architectural artist studio in Ibadan Nigeria built from massive cast dark-pigmented concrete blocks. A single monumental clerestory aperture casts a pristine triangle of bright skylight across polished concrete floors and unfinished stone walls. High-contrast monochromatic monograph photo with meticulous geometric composition." src="../3 apt lagos/lagos image 2.jpg">
-</a>
-</div>
-<div class="lg:col-span-6 lg:pl-space-lg flex flex-col justify-between h-full pt-6 lg:pt-0">
-<div>
-<div class="flex items-center justify-between border-b border-primary-container/15 pb-4 mb-6">
-<span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 05 / 06</span>
-<span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2023</span>
-</div>
-<h2 class="font-headline-1-desktop text-headline-2-mobile md:text-headline-1-desktop text-primary mb-4">
-                LAGOS APARTMENT
-              </h2>
-<p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-8 tracking-widest">
-                Workspaces &amp; Studios — Ibadan, Nigeria
-              </p>
-<div class="space-y-4 mb-10 text-primary-container/80 font-body-default">
-<p class="">
-                  A multi-storey apartment building that combines modern architectural design with functional living spaces. The layout prioritizes privacy, comfort, and efficient space utilization, providing well-organized residential units suited to contemporary living.
+  <!-- PROJECT 01: RESIDENCE 01 (Image left, meta right) -->
+  <article class="py-space-xl lg:py-space-2xl group scroll-mt-[65px]" id="project-01">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+      <div class="lg:col-span-8">
+        <a class="img-zoom-frame block bg-surface-variant relative aspect-[16/10]" href="#project-01">
+          <img class="w-full h-full object-cover"
+               alt="Curving open-air church auditorium in Calabar, Nigeria, constructed from rammed red laterite earth and soaring bent timber beams. Soft early morning mist rising through lush tropical canopy, diffuse golden light grazing the earthen layers."
+               src="../clinic design osun/clinic image 2.jpg">
+        </a>
+      </div>
+      <div class="lg:col-span-4 flex flex-col justify-between pt-4 lg:pt-0">
+        <div>
+          <div class="flex items-center justify-between border-b border-primary/10 pb-space-sm mb-space-md">
+            <span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 01 / 06</span>
+            <span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2025</span>
+          </div>
+          <h2 class="font-headline-2-mobile md:font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary uppercase mb-space-sm font-normal">
+            RESIDENCE 01
+          </h2>
+          <p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-space-md tracking-widest">
+            Residential Architecture — Lagos, Nigeria
+          </p>
+          <p class="font-body-default text-body-default text-on-surface-variant font-light mb-space-md leading-relaxed">
+            The design is a mixed-use building that integrates a healthcare facility and a residential apartment under a hip roof, with an emphasis on functionality and aesthetics.
+          </p>
+          <div class="border-t border-primary/10 pt-space-sm space-y-2 mb-space-md">
+            <div class="flex justify-between font-metadata-label text-metadata-label uppercase">
+              <span class="text-secondary">Site Area</span>
+              <span class="text-primary font-medium">1,420 m²</span>
+            </div>
+            <div class="flex justify-between font-metadata-label text-metadata-label uppercase">
+              <span class="text-secondary">Structure</span>
+              <span class="text-primary font-medium">Reinforced Fair-Faced Concrete</span>
+            </div>
+          </div>
+        </div>
+        <a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase font-medium" href="#project-01">
+          VIEW PROJECT <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+    </div>
+  </article>
 
-                </p>
-<p class="">
-                  Careful attention is given to natural lighting, ventilation, circulation, and the relationship between private and shared spaces. With its balanced proportions, clean architectural lines, and practical floor plans, the building offers a comfortable and visually appealing residential environment.
-                </p>
+  <!-- PROJECT 02: MULTI-PURPOSE HALL (Meta left, portrait image right) -->
+  <article class="py-space-xl lg:py-space-2xl group scroll-mt-[65px]" id="project-02">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+      <div class="order-2 lg:order-1 lg:col-span-4 flex flex-col justify-between pt-4 lg:pt-0">
+        <div>
+          <div class="flex items-center justify-between border-b border-primary/10 pb-space-sm mb-space-md">
+            <span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 02 / 06</span>
+            <span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2024</span>
+          </div>
+          <h2 class="font-headline-2-mobile md:font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary uppercase mb-space-sm font-normal">
+            MULTI-PURPOSE HALL
+          </h2>
+          <p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-space-md tracking-widest">
+            Commercial Architecture — Abuja, Nigeria
+          </p>
+          <p class="font-body-default text-body-default text-on-surface-variant font-light mb-space-md leading-relaxed">
+            The design is a mixed-use building that integrates a residential apartment and a multi-purpose hall under a hip roof, with an emphasis on functionality and aesthetics.
+          </p>
+          <div class="border-t border-primary/10 pt-space-sm space-y-2 mb-space-md">
+            <div class="flex justify-between font-metadata-label text-metadata-label uppercase">
+              <span class="text-secondary">Gross Built Area</span>
+              <span class="text-primary font-medium">8,800 m²</span>
+            </div>
+            <div class="flex justify-between font-metadata-label text-metadata-label uppercase">
+              <span class="text-secondary">Envelope</span>
+              <span class="text-primary font-medium">Extruded Terracotta Louvers</span>
+            </div>
+          </div>
+        </div>
+        <a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase font-medium" href="#project-02">
+          VIEW PROJECT <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+      <div class="hidden lg:block lg:col-span-1"></div>
+      <div class="order-1 lg:order-2 lg:col-span-7">
+        <a class="img-zoom-frame block bg-surface-variant relative aspect-[4/5]" href="#project-02">
+          <img class="w-full h-full object-cover"
+               alt="Monumental commercial office headquarters in Abuja, Nigeria, with a geometric vertical terracotta louvered screen facade. Midday warm light casting intricate linear shadows down the sharp stone plinth."
+               src="../multipurpose osun/multi image 1.jpg">
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- PROJECT 03: CHURCH AUDITORIUM (Wide image left, meta right, aligned bottom) -->
+  <article class="py-space-xl lg:py-space-2xl group scroll-mt-[65px]" id="project-03">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+      <div class="lg:col-span-8">
+        <a class="img-zoom-frame block bg-surface-variant relative aspect-[16/9]" href="#project-03">
+          <img class="w-full h-full object-cover"
+               alt="Curving open-air church auditorium in Calabar, Nigeria, constructed from rammed red laterite earth and soaring bent timber beams. Soft early morning mist rising through lush tropical canopy, diffuse golden light grazing the earthen layers."
+               src="../church design lagos/lagos church image 2.jpg">
+        </a>
+      </div>
+      <div class="hidden lg:block lg:col-span-1"></div>
+      <div class="lg:col-span-3 pt-6 lg:pt-0">
+        <div class="flex items-center justify-between border-b border-primary/10 pb-space-sm mb-space-md">
+          <span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 03 / 06</span>
+          <span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2024</span>
+        </div>
+        <h2 class="font-headline-2-mobile md:font-headline-3 text-headline-2-mobile md:text-headline-3 text-primary uppercase mb-space-sm font-normal">
+          CHURCH AUDITORIUM
+        </h2>
+        <p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-space-md tracking-widest">
+          Public &amp; Cultural — Calabar, Nigeria
+        </p>
+        <p class="font-body-default text-body-default text-on-surface-variant font-light mb-space-md leading-relaxed">
+          A church auditorium designed to create a welcoming space for worship, fellowship, and community gatherings, combining functional planning with a simple and thoughtful architectural expression.
+        </p>
+        <a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase font-medium" href="#project-03">
+          VIEW PROJECT <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- PROJECT 04: WARRI APARTMENT (Offset meta left, wide image right) -->
+  <article class="py-space-xl lg:py-space-2xl group scroll-mt-[65px]" id="project-04">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+      <div class="lg:col-start-2 lg:col-span-4 mb-6 lg:mb-0">
+        <div class="flex items-center justify-between border-b border-primary/10 pb-space-sm mb-space-md">
+          <span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 04 / 06</span>
+          <span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2023</span>
+        </div>
+        <h2 class="font-headline-2-mobile md:font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary uppercase mb-space-sm font-normal">
+          WARRI APARTMENT
+        </h2>
+        <p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-space-md tracking-widest">
+          Housing Architecture — Delta, Warri, Nigeria
+        </p>
+        <p class="font-body-default text-body-default text-on-surface-variant font-light mb-space-md leading-relaxed">
+          A thoughtfully designed bungalow that combines functional planning, contemporary aesthetics, and comfortable living. The design emphasizes efficient use of space, well-organized interiors, and a seamless connection between indoor and outdoor environments. Careful consideration is given to natural lighting, ventilation, and the arrangement of living spaces to create a home that is both practical and inviting. With its clean architectural lines and balanced proportions, the bungalow reflects a simple yet refined approach to residential design.
+        </p>
+        <a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase font-medium" href="#project-04">
+          VIEW PROJECT <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+      <div class="lg:col-start-7 lg:col-span-6">
+        <a class="img-zoom-frame block bg-surface-variant relative aspect-[4/3]" href="#project-04">
+          <img class="w-full h-full object-cover"
+               alt="Elevated timber and weathered zinc eco chalets nestled along the mangrove waterways of Warri, Nigeria. Overcast atmospheric daylight illuminating the textured charred wood cladding, glass curtain walls, and wooden boardwalks."
+               src="../3 bedroom warri/warri image 3.jpg">
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- PROJECT 05: LAGOS APARTMENT (Square image left, long meta right) -->
+  <article class="py-space-xl lg:py-space-2xl group scroll-mt-[65px]" id="project-05">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+      <div class="lg:col-span-6">
+        <a class="img-zoom-frame block bg-surface-variant relative aspect-square" href="#project-05">
+          <img class="w-full h-full object-cover"
+               alt="Brutalist architectural artist studio in Ibadan, Nigeria, built from massive cast dark-pigmented concrete blocks. A single monumental clerestory aperture casts a pristine triangle of bright skylight across polished concrete floors."
+               src="../3 apt lagos/lagos image 2.jpg">
+        </a>
+      </div>
+      <div class="lg:col-span-6 lg:pl-space-lg flex flex-col justify-between h-full pt-6 lg:pt-0">
+        <div>
+          <div class="flex items-center justify-between border-b border-primary/10 pb-space-sm mb-space-md">
+            <span class="font-metadata-label text-metadata-label text-secondary uppercase">INDEX 05 / 06</span>
+            <span class="font-metadata-caps text-metadata-caps text-tertiary uppercase font-semibold">2023</span>
+          </div>
+          <h2 class="font-headline-2-mobile md:font-headline-1-desktop text-headline-2-mobile md:text-headline-1-desktop text-primary uppercase mb-space-sm font-normal">
+            LAGOS APARTMENT
+          </h2>
+          <p class="font-metadata-caps text-metadata-caps text-secondary uppercase mb-space-md tracking-widest">
+            Workspaces &amp; Studios — Ibadan, Nigeria
+          </p>
+          <div class="space-y-space-md mb-space-lg text-on-surface-variant font-body-default font-light">
+            <p>
+              A multi-storey apartment building that combines modern architectural design with functional living spaces. The layout prioritizes privacy, comfort, and efficient space utilization, providing well-organized residential units suited to contemporary living.
+            </p>
+            <p>
+              Careful attention is given to natural lighting, ventilation, circulation, and the relationship between private and shared spaces. With its balanced proportions, clean architectural lines, and practical floor plans, the building offers a comfortable and visually appealing residential environment.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-gutter border-t border-primary/10 pt-space-sm mb-space-md">
+            <div>
+              <span class="block font-metadata-label text-metadata-label text-secondary uppercase mb-space-xs">Typology</span>
+              <span class="font-body-default text-primary">Atelier &amp; Archive</span>
+            </div>
+            <div>
+              <span class="block font-metadata-label text-metadata-label text-secondary uppercase mb-space-xs">Status</span>
+              <span class="font-body-default text-primary">Completed / Monograph Published</span>
+            </div>
+          </div>
+        </div>
+        <a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase font-medium" href="#project-05">
+          VIEW PROJECT <span class="arrow-glyph">→</span>
+        </a>
+      </div>
+    </div>
+  </article>
+
+  <!-- PROJECT 06: JRCCG (Wide panorama + baseline caption bar) -->
+  <article class="py-space-xl lg:py-space-2xl group scroll-mt-[65px]" id="project-06">
+    <div class="space-y-space-md">
+      <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary/10 pb-space-sm mb-space-md">
+        <div>
+          <span class="font-metadata-label text-metadata-label text-secondary uppercase block mb-space-xs">INDEX 06 / 06</span>
+          <h2 class="font-headline-2-mobile md:font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary uppercase font-normal">
+            JRCCG
+          </h2>
+        </div>
+        <div class="mt-4 md:mt-0 md:text-right">
+          <span class="font-metadata-caps text-metadata-caps text-secondary uppercase tracking-widest">
+            Waterfront Residential — Lagos, Nigeria | 2022
+          </span>
+        </div>
+      </div>
+      <div class="w-full">
+        <a class="img-zoom-frame block bg-surface-variant relative aspect-[21/9]" href="#project-06">
+          <img class="w-full h-full object-cover"
+               alt="Wide cinematic panoramic photograph of a modern waterfront residence on the Lagos lagoon at twilight. Slender blackened steel structural frames support an immense low-slung horizontal roof deck overlooking tranquil dark blue waters. Warm ambient interior lights glow softly through floor-to-ceiling glass screens against an indigo evening sky."
+               src="../JRCCG/JRCCG image 1.jpg">
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline pt-space-xs border-b border-primary/10 pb-space-sm">
+        <div class="md:col-span-8">
+          <p class="font-body-default text-body-default text-on-surface-variant font-light leading-relaxed">
+            Horizontal lines dominate this shoreline residence overlooking the Atlantic shipping basin. Designed with extensive overhangs to prevent solar penetration and integrated rainwater collection reservoirs serving the property's indigenous botanical landscape.
+          </p>
+        </div>
+        <div class="md:col-span-4 md:text-right">
+          <a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase font-medium" href="#project-06">
+            VIEW PROJECT <span class="arrow-glyph">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+
 </div>
-<div class="grid grid-cols-2 gap-4 border-t border-primary-container/10 pt-4 mb-8">
-<div>
-<span class="block font-metadata-label text-metadata-label text-secondary uppercase mb-1">Typology</span>
-<span class="font-body-default text-primary">Atelier &amp; Archive</span>
-</div>
-<div>
-<span class="block font-metadata-label text-metadata-label text-secondary uppercase mb-1">Status</span>
-<span class="font-body-default text-primary">Completed / Monograph Published</span>
-</div>
-</div>
-</div>
-<div>
-<a class="inline-flex items-center space-x-2 font-metadata-caps text-metadata-caps text-primary hover:text-tertiary transition-colors duration-300 link-underline uppercase tracking-widest" href="#project-05">
-<span class="">VIEW PROJECT</span>
-<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-</a>
-</div>
-</div>
-</div>
-</article>
-<!-- PROJECT 06: JRCCG (Wide Panoramic Architectural Photograph) -->
-<article class="py-space-xl lg:py-space-2xl group">
-<div class="space-y-6">
-<div class="flex flex-col md:flex-row md:items-end justify-between border-b border-primary-container/15 pb-4">
-<div>
-<span class="font-metadata-label text-metadata-label text-secondary uppercase block mb-1">INDEX 06 / 06</span>
-<h2 class="font-headline-2-desktop text-headline-2-mobile md:text-headline-2-desktop text-primary">
-                JRCCG
-              </h2>
-</div>
-<div class="mt-4 md:mt-0 text-right">
-<p class="font-metadata-caps text-metadata-caps text-secondary uppercase tracking-widest">
-                Waterfront Residential — Lagos, Nigeria | 2022
-              </p>
-</div>
-</div>
-<div class="w-full overflow-hidden bg-surface-container">
-<a class="block overflow-hidden aspect-[21/9]" href="#project-06">
-<img class="w-full h-full object-cover img-zoom" data-alt="Wide cinematic panoramic photograph of a modern waterfront residence on the Lagos lagoon at twilight. Slender blackened steel structural frames support an immense low-slung horizontal roof deck overlooking tranquil dark blue waters. Warm ambient interior lights glow softly through floor-to-ceiling glass screens against an indigo evening sky." src="../JRCCG/JRCCG image 1.jpg">
-</a>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-baseline pt-2">
-<div class="md:col-span-8">
-<p class="font-body-default text-body-default text-primary-container/85 leading-relaxed">
-                Horizontal lines dominate this shoreline residence overlooking the Atlantic shipping basin. Designed with extensive overhangs to prevent solar penetration and integrated rainwater collection reservoirs serving the property's indigenous botanical landscape.
-              </p>
-</div>
-<div class="md:col-span-4 text-left md:text-right">
-<a class="inline-flex items-center space-x-2 font-metadata-caps text-metadata-caps text-primary hover:text-tertiary transition-colors duration-300 link-underline uppercase tracking-widest" href="#project-06">
-<span class="">VIEW PROJECT</span>
-<span class="transition-transform duration-300 group-hover:translate-x-1">→</span>
-</a>
-</div>
-</div>
-</div>
-</article>
 
 </main>
-<!-- ================= FOOTER (Shared Component Exact Implementation) ================= -->
+
+<!-- ===================== FOOTER (Shared Component) ===================== -->
 <footer class="bg-primary-container text-on-primary border-t border-outline/20">
-<div class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter max-w-[1600px] mx-auto">
-<!-- Brand Plate & Philosophy -->
-<div class="lg:col-span-4 space-y-4">
-<a class="font-metadata-caps text-metadata-caps tracking-widest font-bold text-on-primary uppercase block" href="/work">
-          AKOROGIE PRECIOUS
-        </a>
-<p class="font-body-default text-body-default text-on-primary/75 max-w-sm">
-          An architectural practice grounded in the spatial poetics, microclimates, and regional materials of West Africa.
+  <div class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-xl grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 gap-gutter max-w-[1600px] mx-auto">
+
+    <!-- Brand -->
+    <div class="md:col-span-6 lg:col-span-4 flex flex-col justify-between">
+      <div>
+        <span class="font-metadata-caps text-metadata-caps tracking-widest font-bold text-on-primary uppercase block mb-2">AKOROGIE PRECIOUS</span>
+        <p class="font-body-default text-body-default text-on-primary-container font-light max-w-sm">
+          ARCHITECTURE SHAPED BY PEOPLE, PLACE, MATERIAL AND EXPERIENCE.
         </p>
-<p class="font-metadata-caps text-metadata-caps uppercase text-on-primary-container tracking-wider">
-          LAGOS &amp; ABUJA, NIGERIA
+      </div>
+      <div class="mt-8 font-metadata-label text-metadata-label text-on-primary-container uppercase">
+        LOCATIONS: LAGOS &amp; ABUJA, NIGERIA
+      </div>
+    </div>
+
+    <!-- Index -->
+    <div class="md:col-span-3 lg:col-span-3">
+      <span class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container block mb-4">INDEX</span>
+      <ul class="space-y-2">
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="work.html">WORK</a></li>
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="about.html">ABOUT</a></li>
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="about.html#curriculum-vitae">MONOGRAPH</a></li>
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="../index.html">JOURNAL</a></li>
+      </ul>
+    </div>
+
+    <!-- Channels -->
+    <div class="md:col-span-3 lg:col-span-3">
+      <span class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container block mb-4">CHANNELS</span>
+      <ul class="space-y-2">
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="mailto:studio@adewalebello.com">CONTACT</a></li>
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="https://instagram.com" rel="noopener noreferrer" target="_blank">INSTAGRAM</a></li>
+        <li><a class="font-body-default text-body-default text-on-primary hover:text-tertiary-fixed transition-colors duration-300" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">LINKEDIN</a></li>
+      </ul>
+    </div>
+
+    <!-- Registration -->
+    <div class="md:col-span-6 lg:col-span-2 flex flex-col justify-between">
+      <div>
+        <span class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container block mb-4">REGISTRATION</span>
+        <p class="font-metadata-label text-metadata-label text-on-primary-container uppercase">
+          ARCON REG. NO. 4912<br>
+          NIA CORPORATE MEMBER
         </p>
-</div>
-<!-- Quick Index Links -->
-<div class="lg:col-start-6 lg:col-span-3 space-y-3">
-<span class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container block mb-4">
-          HOME
-        </span>
-<ul class="space-y-2">
-<li class="">
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary font-medium hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="/work">
-              WORK
-            </a>
-</li>
-<li class="">
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="#about">
-              ABOUT
-            </a>
-</li>
-<li class="">
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="#monograph">
-              CONTACT
-            </a>
-</li>
-<li class="">
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="#journal">
-              RESUME
-            </a>
-</li>
-</ul>
-</div>
-<!-- Inquiries & Socials -->
-<div class="lg:col-start-9 lg:col-span-4 space-y-3">
-<span class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container block mb-4">
-          COMMUNICATION
-        </span>
-<p class="font-body-default text-body-default text-on-primary/80">
-          General Inquiries &amp; Commissions:<br>
-<a class="text-tertiary-fixed-dim hover:underline font-mono" href="mailto:studio@adewalebello.com">studio@adewalebello.com</a>
-</p>
-<div class="flex space-x-6 pt-2">
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="https://instagram.com" rel="noopener noreferrer" target="_blank">
-            INSTAGRAM
-          </a>
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
-            LINKEDIN
-          </a>
-<a class="font-metadata-caps text-metadata-caps uppercase tracking-widest text-on-primary-container hover:text-tertiary-fixed transition-colors duration-300 inline-block hover:translate-x-1 transition-transform" href="#contact">
-            CONTACT
-          </a>
-</div>
-</div>
-<!-- Copyright Plate (Full-span Bottom) -->
-<div class="md:col-span-6 lg:col-span-12 pt-space-lg mt-space-md border-t border-outline/10 flex flex-col md:flex-row justify-between items-start md:items-center text-on-primary-container font-metadata-caps text-metadata-caps">
-<p class="">© 2026 AKOROGIE PRECIOUS. ALL RIGHTS RESERVED. LAGOS &amp; ABUJA, NIGERIA.</p>
-<p class="mt-2 md:mt-0 tracking-widest text-xs uppercase opacity-60">DIGITAL MONOGRAPH / EDITION 04</p>
-</div>
-</div>
+      </div>
+    </div>
+
+    <!-- Legal -->
+    <div class="col-span-1 md:col-span-6 lg:col-span-12 pt-space-lg mt-space-md border-t border-outline/20 flex flex-col md:flex-row justify-between items-start md:items-center text-on-primary-container text-xs">
+      <p class="font-metadata-caps text-metadata-caps">
+        © 2026 AKOROGIE PRECIOUS. ALL RIGHTS RESERVED. LAGOS &amp; ABUJA, NIGERIA.
+      </p>
+      <div class="mt-2 md:mt-0 font-metadata-caps text-metadata-caps uppercase tracking-widest">
+        DIGITAL MONOGRAPH EDITION 1.0
+      </div>
+    </div>
+  </div>
 </footer>
 
-
-</body></html>
+</body>
+</html>

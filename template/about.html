@@ -118,82 +118,64 @@
 </head>
 <body class="bg-surface-container-low text-on-surface antialiased selection:bg-secondary-container selection:text-tertiary" data-mode="connect">
 <!-- TOP NAVIGATION BAR (Shared Component JSON Source) -->
-<header class="sticky top-0 z-40 bg-surface dark:bg-primary border-b border-outline-variant/30 dark:border-outline/20">
+<header class="sticky top-0 z-50 bg-surface border-b border-outline-variant/30">
 <div class="w-full px-margin-mobile md:px-margin-tablet lg:px-margin py-space-md flex justify-between items-center max-w-[1600px] mx-auto">
-<!-- Brand Logo / Product Name -->
-<a class="font-metadata-caps text-metadata-caps tracking-widest font-semibold text-primary dark:text-inverse-primary uppercase transition-colors duration-300 hover:text-tertiary" href="/">
-  ADEWALE BELLO ARCHITECTS
-</a>
-
-<!-- Desktop Navigation Cluster (Visible at lg breakpoint) -->
-<nav class="hidden lg:flex items-center space-x-8">
-  <a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant dark:text-outline-variant font-normal hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-colors duration-300" href="/work">
-    01 WORK
-  </a>
-  <a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-tertiary dark:text-tertiary-fixed-dim border-b border-tertiary dark:border-tertiary-fixed-dim pb-space-xs font-medium" href="/about">
-    02 ABOUT
-  </a>
-  <a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant dark:text-outline-variant font-normal hover:text-tertiary dark:hover:text-tertiary-fixed-dim transition-colors duration-300" href="/contact">
-    03 CONTACT
-  </a>
+<!-- Brand Logo / Identity -->
+<a class="font-metadata-caps text-metadata-caps tracking-widest font-semibold text-primary uppercase hover:text-tertiary transition-colors duration-300" href="/">AKOROGIE PRECIOUS</a>
+<!-- Desktop Minimal Numbered Navigation -->
+<nav class="hidden md:flex items-center space-x-8">
+<!-- Active Nav: 01 WORK (Homepage showcases Selected Work portfolio) -->
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant pb-space-xs font-medium transition-colors duration-300" href="#">
+          01 HOME
+        </a>
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-tertiary border-b border-tertiary pb-space-xs font-medium transition-colors duration-300" href="#work">
+          02 WORK
+        </a>
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal hover:text-tertiary transition-colors duration-300" href="#">
+          03 ABOUT
+        </a>
+<a class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-on-surface-variant font-normal hover:text-tertiary transition-colors duration-300" href="template/contactus.html">
+          04 CONTACT
+        </a>
 </nav>
-
-<!-- Trailing Action & Mobile/Tablet Trigger -->
-<div class="flex items-center space-x-4 lg:space-x-6">
-  <a class="hidden lg:inline-block font-metadata-caps text-metadata-caps tracking-widest uppercase text-primary border border-primary/20 px-3 py-1.5 hover:border-tertiary hover:text-tertiary transition-all duration-300" href="#curriculum-vitae">
-    CV / RESUME
-  </a>
-
-  <!-- Mobile/Tablet Toggle Button (visible below lg) -->
-  <button aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden flex items-center space-x-2 text-primary dark:text-inverse-primary border border-outline-variant/40 px-3 py-1.5 hover:border-tertiary hover:text-tertiary transition-colors duration-300" id="mobile-nav-toggle" onclick="const overlay = document.getElementById('mobile-nav-overlay'); const isExpanded = this.getAttribute('aria-expanded') === 'true'; if (overlay) { overlay.classList.toggle('hidden'); document.body.classList.toggle('overflow-hidden'); this.setAttribute('aria-expanded', !isExpanded); }" type="button">
-    <span class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-xs font-medium">MENU</span>
-    <span class="material-symbols-outlined text-lg">menu</span>
-  </button>
+<!-- Trailing Action -->
+<div class="hidden md:flex items-center">
+<a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase"  download="" href="CV/Precious Akorogie Uche cv.pdf">
+          CV / RESUME <span class="arrow-glyph">→</span>
+</a>
 </div>
+<!-- Mobile Trigger -->
+<button aria-label="Open Navigation Menu" class="md:hidden text-primary p-1 focus:outline-none" onclick="document.getElementById('mobile-drawer').classList.toggle('hidden')" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+<!-- Mobile Drawer Overlay -->
+<div class="hidden md:hidden fixed inset-0 top-[65px] bg-surface z-40 px-margin-mobile py-space-md flex flex-col justify-between border-t border-outline-variant/30" id="mobile-drawer">
+<div class="flex flex-col space-y-1">
+<a class="font-headline-2-mobile text-headline-2-mobile text-primary border-b border-outline-variant/20 pb-4" href="/index.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          01 HOME
+        </a>
+<a class="font-headline-2-mobile text-headline-2-mobile text-primary border-b  border-outline-variant/20 pb-4" href="/template/work.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          02 WORK
+        </a>
+<a class="font-headline-2-mobile text-headline-2-mobile text-tertiary border-b border-outline-variant/20 pb-4" href="#" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          03 ABOUT
+        </a>
+<a class="font-headline-2-mobile text-headline-2-mobile text-primary border-b border-outline-variant/20 pb-4" href="/template/contactus.html" onclick="document.getElementById('mobile-drawer').classList.add('hidden')">
+          04 CONTACT
+        </a>
+
+<div class="border-b mt-5 text-center p-4 w-">
+<a class="architectural-link font-metadata-caps text-metadata-caps tracking-widest text-primary hover:text-tertiary uppercase"  download="" href="CV/Precious Akorogie Uche cv.pdf">
+          CV / RESUME <span class="arrow-glyph">→</span>
+</a>
 </div>
 
-<!-- Full Overlay / Drawer for Mobile and Tablet Viewports -->
-<div class="hidden fixed inset-0 z-50 bg-surface-container-low/95 backdrop-blur-md flex flex-col justify-between p-space-lg md:p-space-xl transition-all duration-300" id="mobile-nav-overlay">
-  <!-- Overlay Header -->
-  <div class="flex justify-between items-center border-b border-outline-variant/30 pb-space-md">
-    <span class="font-metadata-caps text-metadata-caps tracking-widest font-semibold text-primary uppercase">
-      ADEWALE BELLO ARCHITECTS
-    </span>
-    <button aria-label="Close navigation menu" class="flex items-center space-x-2 text-primary hover:text-tertiary transition-colors duration-300 p-2 border border-outline-variant/40" onclick="const overlay = document.getElementById('mobile-nav-overlay'); const toggle = document.getElementById('mobile-nav-toggle'); if (overlay) { overlay.classList.add('hidden'); document.body.classList.remove('overflow-hidden'); if (toggle) toggle.setAttribute('aria-expanded', 'false'); }" type="button">
-      <span class="font-metadata-caps text-metadata-caps tracking-widest uppercase text-xs font-medium">CLOSE</span>
-      <span class="material-symbols-outlined text-xl">close</span>
-    </button>
-  </div>
-
-  <!-- Overlay Navigation Links -->
-  <nav class="flex flex-col space-y-6 my-auto py-space-xl">
-    <a class="font-headline-2-mobile md:text-headline-2-desktop tracking-wide uppercase text-on-surface hover:text-tertiary transition-colors duration-300 font-light flex items-center justify-between border-b border-outline-variant/20 pb-4" href="/work">
-      <span class="">01 WORK</span>
-      <span class="font-metadata-caps text-metadata-caps text-secondary">PORTFOLIO</span>
-    </a>
-    <a class="font-headline-2-mobile md:text-headline-2-desktop tracking-wide uppercase text-tertiary transition-colors duration-300 font-normal flex items-center justify-between border-b border-outline-variant/20 pb-4" href="/about">
-      <span class="">02 ABOUT</span>
-      <span class="font-metadata-caps text-metadata-caps text-tertiary font-semibold">CURRENT</span>
-    </a>
-    <a class="font-headline-2-mobile md:text-headline-2-desktop tracking-wide uppercase text-on-surface hover:text-tertiary transition-colors duration-300 font-light flex items-center justify-between border-b border-outline-variant/20 pb-4" href="/contact">
-      <span class="">03 CONTACT</span>
-      <span class="font-metadata-caps text-metadata-caps text-secondary">INQUIRIES</span>
-    </a>
-    <a class="inline-flex items-center justify-between font-metadata-caps text-metadata-caps tracking-widest uppercase text-primary border border-primary/30 p-space-md hover:border-tertiary hover:text-tertiary transition-all duration-300 mt-4" href="#curriculum-vitae" onclick="const overlay = document.getElementById('mobile-nav-overlay'); if (overlay) { overlay.classList.add('hidden'); document.body.classList.remove('overflow-hidden'); }">
-      <span class="">CV / RESUME</span>
-      <span class="material-symbols-outlined text-sm">download</span>
-    </a>
-  </nav>
-
-  <!-- Overlay Footer Meta -->
-  <div class="border-t border-outline-variant/30 pt-space-md flex flex-col md:flex-row justify-between items-start md:items-center space-y-2 md:space-y-0 text-on-surface-variant">
-    <span class="font-metadata-label text-metadata-label uppercase text-secondary">
-      STUDIO PRACTICE — LAGOS &amp; ABUJA, NIGERIA
-    </span>
-    <span class="font-metadata-label text-metadata-label uppercase text-secondary">
-      STUDIO@ADEWALEBELLO.COM
-    </span>
-  </div>
+</div>
+<div class="pt-8">
+<span class="font-metadata-label text-metadata-label text-secondary uppercase block mb-2">PRACTICE INQUIRIES</span>
+<a class="font-body-default text-body-default text-primary underline underline-offset-4" href="mailto:estrellagold202@gmail.com">estrellagold202@gmail.com</a>
+</div>
 </div>
 </header>
 <!-- MAIN EDITORIAL CANVAS -->
@@ -507,7 +489,7 @@
             </p>
 <!-- Direct Download Action Link per Design Spec -->
 <div class="pt-2">
-<a class="inline-flex items-center space-x-3 text-primary border-b border-primary pb-1 group hover:text-tertiary hover:border-tertiary transition-all duration-300" download="" href="/cv/architect-cv.pdf">
+<a class="inline-flex items-center space-x-3 text-primary border-b border-primary pb-1 group hover:text-tertiary hover:border-tertiary transition-all duration-300" download="" href="../CV/Precious Akorogie Uche cv.pdf">
 <span class="font-metadata-caps text-metadata-caps tracking-widest font-semibold uppercase">
                   DOWNLOAD CV ↓
                 </span>
