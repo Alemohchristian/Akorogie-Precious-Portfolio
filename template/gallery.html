@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gallery - Architectural Plates &amp; Visual Archive | AKOROGIE PRECIOUS</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary": "#3b150b",
+            "secondary-fixed": "#eee1c6",
+            "outline": "#74777d",
+            "background": "#fbf9f4",
+            "on-primary-fixed": "#0c1c2e",
+            "on-background": "#1b1c19",
+            "on-secondary": "#ffffff",
+            "surface-dim": "#dcdad5",
+            "on-tertiary-fixed": "#341007",
+            "surface-variant": "#e4e2dd",
+            "primary-fixed": "#d4e4fc",
+            "surface-container": "#f0eee9",
+            "on-surface": "#1b1c19",
+            "outline-variant": "#c4c6cd",
+            "on-error-container": "#93000a",
+            "tertiary-fixed-dim": "#fab7a5",
+            "surface-container-high": "#eae8e3",
+            "error-container": "#ffdad6",
+            "on-primary-container": "#91a0b7",
+            "tertiary-fixed": "#ffdbd1",
+            "inverse-primary": "#b8c8e0",
+            "surface": "#fbf9f4",
+            "on-secondary-fixed-variant": "#4e4632",
+            "primary-fixed-dim": "#b8c8e0",
+            "on-primary-fixed-variant": "#39485c",
+            "on-secondary-fixed": "#211b0a",
+            "surface-container-highest": "#e4e2dd",
+            "on-secondary-container": "#6c644e",
+            "error": "#ba1a1a",
+            "surface-container-low": "#f5f3ee",
+            "secondary-fixed-dim": "#d1c5ab",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#30312e",
+            "on-error": "#ffffff",
+            "inverse-on-surface": "#f2f1ec",
+            "primary": "#122234",
+            "surface-tint": "#505f74",
+            "secondary-container": "#eee1c6",
+            "on-primary": "#ffffff",
+            "on-tertiary-container": "#ce9080",
+            "primary-container": "#28374a",
+            "on-surface-variant": "#44474c",
+            "secondary": "#665e48",
+            "surface-bright": "#fbf9f4",
+            "tertiary-container": "#552a1e",
+            "on-tertiary-fixed-variant": "#693a2e",
+            "surface-container-lowest": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "margin-tablet": "2rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-2xl": "8rem",
+            "margin": "4rem",
+            "gutter": "2rem",
+            "margin-mobile": "1.25rem",
+            "gutter-mobile": "1rem",
+            "gutter-tablet": "1.5rem",
+            "space-xl": "4rem",
+            "space-md": "1rem",
+            "space-lg": "2rem"
+          },
+          "fontFamily": {
+            "headline-1-desktop": ["Manrope"],
+            "body-default": ["Inter"],
+            "body-large": ["Inter"],
+            "headline-1-mobile": ["Manrope"],
+            "metadata-label": ["Manrope"],
+            "display-mobile": ["Manrope"],
+            "headline-2-mobile": ["Manrope"],
+            "headline-2-desktop": ["Manrope"],
+            "display-desktop": ["Manrope"],
+            "metadata-caps": ["Manrope"],
+            "headline-3": ["Manrope"]
+          },
+          "fontSize": {
+            "headline-1-desktop": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.025em", "fontWeight": "400" }],
+            "body-default": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "body-large": ["18px", { "lineHeight": "30px", "letterSpacing": "-0.005em", "fontWeight": "400" }],
+            "headline-1-mobile": ["42px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "metadata-label": ["11px", { "lineHeight": "14px", "letterSpacing": "0.16em", "fontWeight": "600" }],
+            "display-mobile": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "headline-2-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "headline-2-desktop": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "400" }],
+            "display-desktop": ["84px", { "lineHeight": "96px", "letterSpacing": "-0.03em", "fontWeight": "400" }],
+            "metadata-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "500" }],
+            "headline-3": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+    }
+    .plate-card img {
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .plate-card:hover img {
+      transform: scale(1.015);
+    }
+  </style>
+</head>
+<body class="bg-surface-container-low text-on-background antialiased selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-40 bg-surface-container-low/95 backdrop-blur-md">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin h-20 flex items-center justify-between">
+<a class="font-headline-3 text-headline-3 font-extrabold tracking-tight text-primary" href="/work">
+        AKOROGIE PRECIOUS
+      </a>
+<!-- Desktop Navigation -->
+<nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-10">
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant hover:text-primary transition-colors" href="../index.html">HOME</a>
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant hover:text-primary transition-colors" href="work.html">WORK</a>
+<a class="font-metadata-caps text-metadata-caps text-primary font-semibold border-b-2 border-on-tertiary-fixed-variant pb-1" href="gallery.html">GALLERY</a>
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant hover:text-primary transition-colors" href="about.html">ABOUT</a>
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant hover:text-primary transition-colors" href="contactus.html">CONTACT</a>
+</nav>
+<!-- Mobile Menu Button -->
+<button aria-label="Toggle Menu" class="md:hidden p-2 text-primary" id="mobile-menu-btn" type="button">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<!-- Mobile Navigation Drawer -->
+<div class="hidden md:hidden bg-surface-container px-margin-mobile py-6" id="mobile-menu">
+<nav aria-label="Mobile Navigation" class="flex flex-col gap-4">
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant py-2" href="../index.html">HOME
+</a>
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant py-2" href="work.html">WORK
+</a>
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant py-2" href="about.html">ABOUT</a>
+<a class="font-metadata-caps text-metadata-caps text-primary font-semibold py-2" href="gallery.html">GALLERY</a>
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant py-2" href="contactus.html">CONTACT</a>
+</nav>
+</div>
+</header>
+<main class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-12 md:pt-20 pb-24">
+<!-- 1. Header / Intro Section -->
+<section class="mb-16 md:mb-24">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-mobile md:gap-gutter">
+<div class="lg:col-span-9">
+<!-- MetaText -->
+<p class="font-metadata-label text-metadata-label text-on-tertiary-fixed-variant mb-6">
+            ARCHIVAL DOSSIER / VOL. IV — VISUAL INDEX
+          </p>
+<!-- PageHeading -->
+<h1 class="font-headline-1-mobile text-headline-1-mobile md:font-headline-1-desktop md:text-headline-1-desktop text-primary mb-6">
+            PHOTOGRAPHIC ARCHIVE &amp; PLATES
+          </h1>
+<p class="font-body-large text-body-large text-on-surface-variant max-w-2xl">
+            An editorial survey of light, materiality, and tectonic form across eight commissioned works in West Africa.
+          </p>
+</div>
+</div>
+<!-- DescriptionList (Curatorial Meta Row) -->
+<div class="mt-12 md:mt-16 pt-8 border-t border-outline-variant/60">
+<dl class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-6 gap-x-gutter">
+<div>
+<dt class="font-metadata-label text-metadata-label text-on-surface-variant mb-1.5">CURATION</dt>
+<dd class="font-metadata-caps text-metadata-caps text-primary">AKOROGIE PRECIOUS</dd>
+</div>
+<div>
+<dt class="font-metadata-label text-metadata-label text-on-surface-variant mb-1.5">CHRONOLOGY</dt>
+<dd class="font-metadata-caps text-metadata-caps text-primary">2021 — 2026</dd>
+</div>
+<div>
+<dt class="font-metadata-label text-metadata-label text-on-surface-variant mb-1.5">LOCATIONS</dt>
+<dd class="font-metadata-caps text-metadata-caps text-primary">LAGOS, ABUJA, CALABAR, IBADAN</dd>
+</div>
+<div>
+<dt class="font-metadata-label text-metadata-label text-on-surface-variant mb-1.5">MEDIUM</dt>
+<dd class="font-metadata-caps text-metadata-caps text-primary">ARCHITECTURAL PLATES &amp; DIAGRAMS</dd>
+</div>
+</dl>
+</div>
+</section>
+<div style="height: 100px; text-align: center;font-size: 40px;">
+<h1>GALLERY</h1>
+</div>
+
+<!-- 3. Dynamic Architectural Gallery Grid -->
+<section class="space-y-16 md:space-y-24" id="gallery-grid">
+<!-- Plate 01: Large Hero-Width Exterior Plate -->
+<article class="plate-card group cursor-pointer" data-category="exterior" onclick="openLightbox('../gallery/img2.png', 'Comprises an en-suite bedroom, living room, kitchen, dining area, and an entrance verandah.')">
+<div class="w-full overflow-hidden bg-surface-container">
+<img class="w-full aspect-[16/9] object-cover block" loading="eager" src="../gallery/img2.png"/>
+</div>
+<div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+            PLATE 01.0 — Comprises an en-suite bedroom, living room, kitchen, dining area, and an entrance verandah.
+          </p>
+<span class="font-metadata-label text-metadata-label text-on-tertiary-fixed-variant opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+            INSPECT PLATE <span class="material-symbols-outlined text-[14px]">north_east</span>
+</span>
+</div>
+</article>
+<!-- Plate 02 & Plate 03: Two-Column Asymmetrical Pairing (7-col / 5-col) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-mobile md:gap-gutter items-start">
+<!-- Left (7-col) -->
+<article class="plate-card lg:col-span-7 group cursor-pointer" data-category="exterior" onclick="openLightbox( '../gallery/img1.png','PLATE 02.0 — HYDRO-CLIMATIC COURTYARD &amp; BOARD-FORMED CONCRETE, RESIDENCE 01.')">
+<div class="w-full overflow-hidden bg-surface-container">
+<img class="w-full aspect-[4/3] object-cover block" loading="lazy" src="../gallery/img1.png"/>
+</div>
+<div class="mt-4 flex items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+              PLATE 02.0 — HYDRO-CLIMATIC COURTYARD &amp; BOARD-FORMED CONCRETE, RESIDENCE 01.
+            </p>
+</div>
+</article>
+<!-- Right (5-col offset) -->
+<article class="plate-card lg:col-span-5 lg:mt-16 group cursor-pointer" data-category="interiors" onclick="openLightbox('../gallery/img3.png', ' Comprises 3 en-suite bedrooms, living room, kitchen, dining area, and an entrance verandah.')">
+<div class="w-full overflow-hidden bg-surface-container">
+<img class="w-full aspect-[4/5] object-cover block" loading="lazy" src="../gallery/img3.png"/>
+</div>
+<div class="mt-4 flex items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+               Comprises 3 en-suite bedrooms, living room, kitchen, dining area, and an entrance verandah.
+            </p>
+</div>
+</article>
+</div>
+<!-- Plate 04: Full-Width Technical Drawing Plate -->
+<article class="plate-card group cursor-pointer" data-category="drawings" onclick="openLightbox('../gallery/img5.jpeg', 'PLATE 04.0 — SCHEMATIC AXONOMETRIC &amp; PASSIVE VENTILATION CORRIDORS (SCALE: N.T.S.).')">
+<div class="w-full bg-surface-container-lowest p-6 md:p-12 lg:p-16 flex items-center justify-center border border-outline-variant/40">
+<img class="w-full max-w-2xl aspect-square object-contain block" loading="lazy" src="../gallery/img5.jpeg"/>
+</div>
+<div class="mt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+            ON SITE, LAGOS
+          </p>
+<span class="font-metadata-label text-metadata-label text-on-tertiary-fixed-variant opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+            INSPECT DIAGRAM <span class="material-symbols-outlined text-[14px]">north_east</span>
+</span>
+</div>
+</article>
+<!-- Plate 05 & Plate 06: Alternating 2-Column Composition (5-col / 7-col) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-mobile md:gap-gutter items-start">
+<!-- Left (5-col) -->
+<article class="plate-card lg:col-span-5 group cursor-pointer" data-category="tectonics" onclick="openLightbox('../gallery/img6.jpeg', 'PLATE 05.0 — LATERITE PERMEABILITY &amp; NATIVE TEAK TIMBER ENVELOPE.')">
+<div class="w-full overflow-hidden bg-surface-container">
+<img class="w-full aspect-[4/3] object-cover block" loading="lazy" src="../gallery/img6.jpeg"/>
+</div>
+<div class="mt-4">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+              PLATE 05.0 — LATERITE PERMEABILITY &amp; NATIVE TEAK TIMBER ENVELOPE.
+            </p>
+</div>
+</article>
+<!-- Right (7-col) -->
+<article class="plate-card lg:col-span-7 lg:mt-12 group cursor-pointer" data-category="interiors" onclick="openLightbox('../gallery/img7.jpeg', 'PLATE 06.0 — SACRED ILLUMINATION &amp; ACOUSTIC TIMBER BAFFLES, INTERIOR SANCTUARY.')">
+<div class="w-full overflow-hidden bg-surface-container">
+<img class="w-full aspect-[16/10] object-cover block" loading="lazy" src="../gallery/img7.jpeg"/>
+</div>
+<div class="mt-4">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+             ON SITE
+            </p>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. Archival Print & Reproduction Acquisition Box -->
+
+<!-- 5. Next Section Navigation -->
+<nav aria-label="Section Navigation" class="mt-20 pt-10 border-t border-outline-variant/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+<a class="font-metadata-caps text-metadata-caps text-on-surface-variant hover:text-primary transition-colors" href="work.html">
+        ← RETURN TO SELECTED WORK
+      </a>
+<a class="font-metadata-caps text-metadata-caps text-primary hover:text-on-tertiary-fixed-variant transition-colors font-semibold" href="about.html">
+        VIEW CURRICULUM VITAE →
+      </a>
+</nav>
+</main>
+<!-- Minimal Monograph Footer -->
+<footer class="bg-surface-container py-12">
+<div class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+        © 2026 AKOROGIE PRECIOUS — ARCHITECTURAL MONOGRAPH
+      </p>
+<p class="font-metadata-label text-metadata-label text-on-surface-variant">
+        LAGOS • ABUJA • CALABAR • IBADAN
+      </p>
+</div>
+</footer>
+<!-- Lightbox Modal for Plate Inspection -->
+<div aria-modal="true" class="fixed inset-0 z-50 hidden bg-primary/95 backdrop-blur-sm flex-col items-center justify-center p-6 md:p-12" id="lightbox" role="dialog">
+<button class="absolute top-6 right-6 md:top-10 md:right-10 text-on-primary hover:text-secondary-fixed transition-colors flex items-center gap-2 font-metadata-caps text-metadata-caps" onclick="closeLightbox()" type="button">
+      CLOSE <span class="material-symbols-outlined">close</span>
+</button>
+<div class="max-w-5xl w-full flex flex-col items-center">
+<img alt="" class="max-h-[75vh] w-auto object-contain" id="lightbox-img" src=""/>
+<p class="mt-6 font-metadata-label text-metadata-label text-secondary-fixed text-center" id="lightbox-caption"></p>
+</div>
+</div>
+<script>
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Curatorial Tab Filtering
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const plates = document.querySelectorAll('.plate-card');
+
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active tab styling
+        tabButtons.forEach(b => {
+          b.classList.remove('text-primary', 'font-semibold', 'border-on-tertiary-fixed-variant');
+          b.classList.add('text-on-surface-variant', 'border-transparent');
+        });
+        btn.classList.remove('text-on-surface-variant', 'border-transparent');
+        btn.classList.add('text-primary', 'font-semibold', 'border-on-tertiary-fixed-variant');
+
+        // Filter plates
+        plates.forEach(plate => {
+          if (filter === 'all' || plate.getAttribute('data-category') === filter) {
+            plate.classList.remove('hidden');
+          } else {
+            plate.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+    // Lightbox Inspection
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(src, caption) {
+      lightboxImg.src = src;
+      lightboxCaption.textContent = caption;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+        closeLightbox();
+      }
+    });
+  </script>
+</body></html>
